@@ -324,7 +324,7 @@ class Twitter(object):
         # Validate filename
         filename = os.path.abspath(filename)
         if not os.path.isfile(filename):
-            click.echo('Invalid file')
+            click.echo('Invalid file{0}'.format(filename))
             return
         if os.path.basename(filename) != 'like.js':
             click.echo('File should be called like.js')
